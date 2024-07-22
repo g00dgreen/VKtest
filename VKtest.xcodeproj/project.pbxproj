@@ -71,9 +71,9 @@
 				AC3C9AAF2C4E5865009D6FDA /* SceneDelegate.swift */,
 				AC3C9AC12C4E6B25009D6FDA /* MVPMainBlock */,
 				AC3C9AB62C4E5867009D6FDA /* Assets.xcassets */,
+				AC3C9ADA2C4EFC58009D6FDA /* Localizable */,
 				AC3C9AB82C4E5867009D6FDA /* LaunchScreen.storyboard */,
 				AC3C9ABB2C4E5867009D6FDA /* Info.plist */,
-				AC3C9AD62C4EF794009D6FDA /* Localizable.strings */,
 			);
 			path = VKtest;
 			sourceTree = "<group>";
@@ -81,7 +81,6 @@
 		AC3C9AC12C4E6B25009D6FDA /* MVPMainBlock */ = {
 			isa = PBXGroup;
 			children = (
-				AC3C9ACE2C4EBE0B009D6FDA /* AnimationHelper */,
 				AC3C9AC42C4E6B4B009D6FDA /* Model */,
 				AC3C9AC22C4E6B36009D6FDA /* View */,
 				AC3C9AC32C4E6B3D009D6FDA /* Presenter */,
@@ -92,6 +91,7 @@
 		AC3C9AC22C4E6B36009D6FDA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC3C9ACE2C4EBE0B009D6FDA /* AnimationHelper */,
 				AC3C9AB12C4E5865009D6FDA /* MainViewController.swift */,
 				AC3C9AC92C4E7DC9009D6FDA /* CollectionViewCell.swift */,
 			);
@@ -121,6 +121,14 @@
 				AC3C9ACF2C4EBE31009D6FDA /* AnimationHelper.swift */,
 			);
 			path = AnimationHelper;
+			sourceTree = "<group>";
+		};
+		AC3C9ADA2C4EFC58009D6FDA /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				AC3C9AD62C4EF794009D6FDA /* Localizable.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

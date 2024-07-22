@@ -114,7 +114,6 @@ extension MainViewController {
                 self.view.backgroundColor = .darkGray
             }
         case .snow:
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 self?.animationHelper?.animateSnow()
             }

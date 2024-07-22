@@ -26,7 +26,7 @@ struct AnimationHelper {
         currentLayer.emitterSize = CGSize(width: mainView.frame.width, height: 0)
         currentLayer.beginTime = CACurrentMediaTime()
         currentLayer.emitterShape = .line
-        currentLayer.timeOffset = 0
+        currentLayer.timeOffset = 2
         
         let snowDrop = CAEmitterCell()
         snowDrop.contents = UIImage(named: "snow")?.cgImage
