@@ -132,10 +132,10 @@ struct AnimationHelper {
     mutating func stopAllAnimation() {
         stopAnimateClouds()
         stopAnimateDrops()
-        stopAnimeSun()
+        stopAnimeteClear()
     }
     
-    private func stopAnimeSun() {
+    private func stopAnimeteClear() {
         for sun in sunArray {
             UIView.animate(withDuration: 1.0,  animations: {
                 sun.center.x = mainView.center.x * 2 + 100
@@ -152,15 +152,15 @@ struct AnimationHelper {
     }
     
     private func stopAnimateClouds(){
-        for cloudView in clouds {
+        for cloud in clouds {
             UIView.animate(withDuration: 1.0, delay: 0,  animations: {
-                if cloudView.frame.origin.x < mainView.frame.width / 2 {
-                    cloudView.frame.origin.x = -cloudView.frame.width - 100
+                if cloud.frame.origin.x < mainView.frame.width / 2 {
+                    cloud.frame.origin.x = -cloud.frame.width - 100
                 } else {
-                    cloudView.frame.origin.x = mainView.frame.width + 100
+                    cloud.frame.origin.x = mainView.frame.width + 100
                 }
             }, completion: { _ in
-                cloudView.removeFromSuperview()
+                cloud.removeFromSuperview()
             })
         }
     }
@@ -171,11 +171,11 @@ struct AnimationHelper {
         CATransaction.setCompletionBlock {
             currentLayer.removeFromSuperlayer()
         }
-        let fadeAnimation = CABasicAnimation(keyPath: "")
+        let fadeAnimation = CABasicAnimation(keyPath: "opacity")
         fadeAnimation.fromValue = currentLayer.opacity
         fadeAnimation.toValue = 0.0
         fadeAnimation.duration = 1.0
-        currentLayer.add(fadeAnimation, forKey: "")
+        currentLayer.add(fadeAnimation, forKey: "fade")
         CATransaction.commit()
     }
     
